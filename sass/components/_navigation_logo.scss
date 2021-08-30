@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__main-logo {
+  text-decoration: none;
+}
+
+.navigation__logo {
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $accent-text-color;
+}
+
+.navigation__logo-studio {
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
