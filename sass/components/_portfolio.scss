@@ -9,21 +9,30 @@
   flex-wrap: wrap;
 }
 
-.portfolio-list__item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-top: 30px;
+.portfolio-list__item{
+  width: 450px;
+  margin-bottom: 30px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:nth-child(3n) {
-  margin-right: 0px;
+  // &:last-child{
+  //   margin-bottom: 60px;
+  // }
 }
 
-    &:nth-child(-n + 3) {
-  margin-top: 0px;
-}
-}
+// .portfolio-list__item {
+//   width: calc((100% - 60px) / 3);
+//   margin-right: 30px;
+//   margin-top: 30px;
+
+//   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//     &:nth-child(3n) {
+//   margin-right: 0px;
+// }
+
+//     &:nth-child(-n + 3) {
+//   margin-top: 0px;
+// }
+// }
 
 .portfolio-list__link {
   display: block;

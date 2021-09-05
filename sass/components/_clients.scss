@@ -1,25 +1,28 @@
 .clients__title {
   font-family: Roboto;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .cients__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .clients__item {
-  margin-right: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 210px;
 
-  &:last-child {
+  &:nth-child(2n) {
   margin-right: 0px;
 }
 }
@@ -29,7 +32,7 @@
   align-items: center;
   justify-content: space-around;
 
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: solid 1px #afb1b8;
   border-radius: 4px;

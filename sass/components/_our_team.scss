@@ -1,6 +1,6 @@
 .team__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+ 
+  padding-bottom: 60px;
   background-color: #f5f4fa;
 }
 
@@ -12,23 +12,27 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  margin: 0px;
+  // margin-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .team__list {
-  display: flex;
+//   display: flex;
 }
 
 .team__item {
-  width: 270px;
+  width: 450px;
+  height: 622px;
   background-color: $adress-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
   &:not(:last-child) {
-  margin-right: 30px;
+//   margin-right: 30px;
+    margin-bottom: 30px;
 }
 }
 

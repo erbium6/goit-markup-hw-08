@@ -2,13 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-.body {
-  font-family: Roboto, sans-serif;
-  background-color: $adress-color;
-  color: $pirimary-text-color;
-}
-
-*,
 *::before,
 *::after {
   box-sizing: inherit;
@@ -23,9 +16,9 @@ img {
 body {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  color: var(--primary-text-color);
-  background-color: #ffffff;
+  background-color: $adress-color;
   margin: 0;
+
 }
 
 .link {
@@ -46,8 +39,26 @@ ul {
 }
 
 .container {
+  padding-left: 15px; 
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
-  padding: 0px 15px;
+  
+
+  @media screen and (min-width: $mobile) {
+      width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+      width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+      width: 1200px;
+  }
+
 }
+  
+
+
+

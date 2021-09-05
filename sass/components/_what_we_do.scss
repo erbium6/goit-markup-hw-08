@@ -1,4 +1,11 @@
 
+.section-examples{
+  @media screen and (max-width: $tablet ) {
+    display: none;
+
+  }
+}
+
 
 .exemples__title {
   font-family: Roboto;
@@ -14,17 +21,6 @@
 
 .exemples__list {
   display: flex;
-}
-
-
-
-.exemples {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left:  15px;
-  padding-right:  15px;
-  padding-bottom: 94px;
 }
 
 .exemples__img {
