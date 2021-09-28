@@ -1,61 +1,69 @@
-.clients__title {
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $title-text-color;
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-
-.cients__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.clients__item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    width: 210px;
-
-  &:nth-child(2n) {
-  margin-right: 0px;
-}
-}
-
-.clients__link {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
+.client-card {
   width: 210px;
-  height: 92px;
-  border: solid 1px #afb1b8;
+  height: 90px;
+
+  @media screen and (max-width: 479px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
   border-radius: 4px;
 
-  &:hover {
-  background-color: $adress-color;
-  border: solid 1px #2196f3;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+    margin-bottom: 0;
+  }
 }
 
-.clients__logo {
+.client-item {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-  fill: $accent-text-color;
 }
 
-.clients__link:hover &,
-.clients__link:focus & {
-  fill: $accent-text-color;
+.client-card:hover .client-item,
+.client-card:focus .client-item {
+  fill: $primary-accent-color;
+  transition: $hover-animation;
 }
+
+.client-card:hover,
+.client-card:focus {
+  border-color: $primary-accent-color;
+  cursor: pointer;
+  transition: $hover-animation;
 }
 
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
 
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 94px;
+  }
 
+  &-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.178;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $hr-text-color;
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 94px;
+    }
+  }
+}

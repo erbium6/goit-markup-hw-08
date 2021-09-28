@@ -1,0 +1,102 @@
+.btn-modal-send {
+  width: 200px;
+  height: 50px;
+
+  background: $primary-accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 30px;
+
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  &:hover {
+    background-color: #188ce8;
+  }
+}
+
+.checkbox {
+  padding-left: 1.2em;
+}
+
+.custom-box {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/empty-checkbox.svg);
+  background-repeat: no-repeat;
+  pointer-events: none;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 50px;
+  }
+}
+
+.form-input-check {
+  opacity: 0;
+  margin-right: 8px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 50px;
+  }
+
+  &:checked + .custom-box {
+    position: absolute;
+    border-radius: 2px;
+    background-image: url(../images/Rectangle.svg);
+  }
+
+  &:checked:focus + .custom-box {
+    position: absolute;
+    border-radius: 0.05em;
+    background-image: url(../images/Rectangle.svg);
+  }
+
+  &:focus + .custom-box {
+    position: absolute;
+    background-image: url(../images/empty-checkbox-blue.svg);
+  }
+}
+
+.form-field-label {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.166px;
+
+  letter-spacing: 0.01em;
+
+  color: $primary-text-color;
+}
+
+.form-field-agreement {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.666;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+
+  & a {
+    color: $primary-accent-color;
+  }
+}
+
+.form-check {
+  display: inline-flex;
+  align-items: center;
+}

@@ -1,0 +1,86 @@
+.team {
+  background-color: $secondary-bg-color;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 64px;
+  }
+
+  &-list {
+    max-width: 480px;
+    width: 100%;
+    padding-top: 30px;
+
+    @media screen and (min-width: $tablet) {
+      max-width: 768px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+    }
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.171;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $hr-text-color;
+    margin: 0;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 1.16;
+    }
+  }
+
+  &-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $hr-text-color;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &-pos {
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $primary-text-color;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &-card {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
+
+    @media screen and(min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+      height: 536px;
+    }
+
+    @media screen and(min-width: $desktop) {
+      width: 270px;
+      height: 428px;
+    }
+  }
+}

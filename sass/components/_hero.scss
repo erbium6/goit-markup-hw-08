@@ -1,59 +1,80 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 
-  text-align: center;
-
-  background-color: #2f303a;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero_bg.jpg);
-  background-size: cover;
+    url("../images/mobile/header.jpg");
+
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $footer-color;
 
-  max-width: 1600px;
-  height: 600px;
-}
+  @media screen and (min-width: $tablet) {
+    background-image: url("../images/tablet/header-tabl.jpg");
+  }
 
-.hero__title {
-  font-family: Roboto;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.6;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $adress-color;
+  @media screen and (min-width: $desktop) {
+    background-image: url("../images/bg-hero.jpg");
+    height: 600px;
+  }
 
-  margin-top: 0px;
+  text-align: center;
   margin-bottom: 30px;
+
+  &-h {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    color: #ffffff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    width: 360px;
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+
+    padding-top: 118px;
+
+    margin: 0 auto;
+    margin-top: 0;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 60px;
+      width: 696px;
+      padding-top: 200px;
+    }
+  }
+
+  &-btn {
+    width: 1200px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    color: #ffffff;
+    background-color: $primary-accent-color;
+
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+
+    margin-top: 30px;
+    margin-bottom: 118px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &-btn:hover,
+  &-btn:focus {
+    transition: $hover-animation;
+    color: $primary-accent-color;
+    background-color: white;
+    cursor: pointer;
+  }
 }
-
-.hero__button {
-  width: 200px;
-  height: 50px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.8;
-  align-items: center;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  color: $adress-color;
-  background-color: $accent-text-color;
-  border-radius: 4px;
-  border-color: transparent;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-  background-color: #188ce8;
-}
-}
-

@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
 }
-
+*,
 *::before,
 *::after {
   box-sizing: inherit;
@@ -16,9 +16,9 @@ img {
 body {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  background-color: $adress-color;
+  color: var(--primary-text-color);
+  background-color: #ffffff;
   margin: 0;
-
 }
 
 .link {
@@ -30,35 +30,3 @@ body {
   padding: 0;
   margin: 0;
 }
-
-ul {
-  list-style: none;
-  padding-left: 0px;
-  margin-top: 0;
-  margin-bottom: 0px;
-}
-
-.container {
-  padding-left: 15px; 
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  
-
-  @media screen and (min-width: $mobile) {
-      width: 480px;
-  }
-
-  @media screen and (min-width: $tablet) {
-      width: 768px;
-  }
-
-  @media screen and (min-width: $desktop) {
-      width: 1200px;
-  }
-
-}
-  
-
-
-

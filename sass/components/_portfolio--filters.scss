@@ -1,0 +1,58 @@
+.portfolio {
+  background-color: #ffffff;
+  box-sizing: border-box;
+
+  &-nav-btn,
+  &-nav-btn-active {
+    background-color: $secondary-bg-color;
+    color: $hr-text-color;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-right: 8px;
+    margin-top: 15px;
+
+    width: auto;
+    height: 38px;
+    left: 576px;
+    top: 174px;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 22px;
+  }
+
+  &-nav {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: left;
+
+    @media screen and(min-width:$tablet) {
+      justify-content: center;
+    }
+    flex-wrap: wrap;
+
+    @media screen and(min-width:$desktop) {
+      padding-top: 94px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &-nav-btn:hover,
+  &-nav-btn:focus {
+    transition: $hover-animation;
+    background-color: $primary-accent-color;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  &-active {
+    background-color: $primary-accent-color;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
