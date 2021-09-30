@@ -463,6 +463,7 @@ body {
   border: none;
   background-color: transparent;
   padding: 0;
+  z-index: 9999;
 }
 .menu-button-mobile .icon-close-mobile {
   display: none;
@@ -488,7 +489,7 @@ body {
     display: none;
     padding-left: 40px;
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0;
     width: 100%;
     z-index: 999;
@@ -506,8 +507,6 @@ body {
   }
 }
 .menu-container-mobile.is-open {
-  position: absolute;
-  top: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,7 +517,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
+  height: 796px;
 }
 @media screen and (min-width: 768px) {
   .menu-container-mobile {
@@ -547,6 +546,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 48px;
   margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
@@ -555,6 +555,7 @@ body {
     font-size: 14px;
     line-height: 1.142;
     margin-bottom: 0;
+    margin-top: 0;
     margin-right: 50px;
   }
 }
@@ -779,12 +780,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url("../images/tablet/header-tabl.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/header-tabl.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/header-tabl.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url("../images/bg-hero.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero.jpg");
     height: 600px;
   }
 }
@@ -1608,6 +1611,11 @@ body {
   overflow: hidden;
   height: 294px;
 }
+@media screen and (max-width: 767px) {
+  .overlay-img {
+    height: 100%;
+  }
+}
 
 .product {
   overflow: hidden;
@@ -1640,14 +1648,18 @@ body {
 }
 .product-cards {
   display: block;
-  height: 404px;
+  height: 100%;
   background: #ffffff;
   border: 1px solid #eeeeee;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .product-cards {
-    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1753,6 +1765,11 @@ body.modal-open {
   .modal {
     width: 528px;
     height: 581px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
   }
 }
 .modal-container {

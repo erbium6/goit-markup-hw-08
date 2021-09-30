@@ -24,6 +24,11 @@
   position: relative;
   overflow: hidden;
   height: 294px;
+
+  @media screen and (max-width: 767px){
+    height: 100%;
+    
+  }
 }
 
 .product {
@@ -46,10 +51,11 @@
   &-cards {
     display: block;
 
-    height: 404px;
+    height: 100%;
 
     @media screen and(min-width:$tablet) {
-      height: auto;
+      flex-direction: column;
+      height: 100%;
     }
 
     background: #ffffff;
@@ -103,6 +109,7 @@
     transform: translateY(0);
   }
 }
+
 
 .product.list {
   @media screen and (min-width: $desktop) {

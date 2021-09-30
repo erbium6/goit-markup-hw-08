@@ -14,11 +14,19 @@
   background-color: $footer-color;
 
   @media screen and (min-width: $tablet) {
-    background-image: url("../images/tablet/header-tabl.jpg");
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ), url("../images/tablet/header-tabl.jpg");
   }
 
   @media screen and (min-width: $desktop) {
-    background-image: url("../images/bg-hero.jpg");
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ), url("../images/bg-hero.jpg");
     height: 600px;
   }
 
