@@ -463,7 +463,7 @@ body {
   border: none;
   background-color: transparent;
   padding: 0;
-  z-index: 9999;
+  z-index: 2;
 }
 .menu-button-mobile .icon-close-mobile {
   display: none;
@@ -489,10 +489,11 @@ body {
     display: none;
     padding-left: 40px;
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1;
+    opacity: 1;
     background: #ffffff;
     border-top: none;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -507,6 +508,7 @@ body {
   }
 }
 .menu-container-mobile.is-open {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,8 +771,8 @@ body {
 
 .hero {
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/header.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/header.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/Hero_mob1x.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/Hero_mob1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -778,10 +780,22 @@ body {
   text-align: center;
   margin-bottom: 30px;
 }
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/Hero_mob2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/Hero_mob2x.jpg");
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/header-tabl.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/header-tabl.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/Hero_tablet2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/Hero_tablet2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -789,6 +803,12 @@ body {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero.jpg");
     height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desktop/header@x2-desk.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/header@x2-desk.jpg");
   }
 }
 .hero-h {
@@ -1678,7 +1698,7 @@ body {
   top: -17px;
   left: 0;
   width: 100%;
-  height: 294px;
+  height: 100%;
   font-size: 17.5px;
   line-height: 1.555;
   letter-spacing: 0.03em;
@@ -1747,6 +1767,7 @@ body.modal-open {
 .modal {
   width: 450px;
   height: 609px;
+  z-index: 999;
   background-color: #fff;
   position: absolute;
   top: 50%;

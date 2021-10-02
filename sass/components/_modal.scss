@@ -26,6 +26,7 @@ body.modal-open {
 .modal {
   width: 450px;
   height: 609px;
+  z-index: 999;
 
   @media screen and (min-width: $desktop) {
     width: 528px;
